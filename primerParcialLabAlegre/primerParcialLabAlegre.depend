@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1634739875 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"input.h"
+	"auto.h"
+	"color.h"
+	"marca.h"
+	"hardcodeo.h"
+	"servicio.h"
+	"trabajo.h"
+
+1634699284 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\input.h
+
+1634683996 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\fecha.c
+	"fecha.h"
+	<stdio.h>
+	<stdlib.h>
+
+1634697415 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\fecha.h
+
+1634699296 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\input.c
+	"input.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1634736839 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\auto.c
+	"auto.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"color.h"
+	"marca.h"
+	"input.h"
+
+1634736618 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\auto.h
+	"color.h"
+	"marca.h"
+
+1634731626 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\color.c
+	"color.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1634731598 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\color.h
+
+1634733145 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\marca.c
+	"marca.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1634731983 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\marca.h
+
+1634734581 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\hardcodeo.c
+	"hardcodeo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1634734188 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\hardcodeo.h
+	"auto.h"
+
+1634737128 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\servicio.c
+	"servicio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1634737084 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\servicio.h
+
+1634739631 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\trabajo.c
+	"trabajo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+	"servicio.h"
+	"fecha.h"
+	"color.h"
+	"marca.h"
+	"input.h"
+
+1634739910 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\trabajo.h
+	"fecha.h"
+	"servicio.h"
+	"auto.h"
+	"color.h"
+	"marca.h"
+
