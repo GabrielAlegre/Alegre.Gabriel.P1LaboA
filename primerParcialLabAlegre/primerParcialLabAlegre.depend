@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1634739875 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\main.c
+1634741284 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -37,7 +37,7 @@
 	"marca.h"
 	"input.h"
 
-1634736618 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\auto.h
+1634740846 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\auto.h
 	"color.h"
 	"marca.h"
 
@@ -47,7 +47,7 @@
 	<stdlib.h>
 	<string.h>
 
-1634731598 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\color.h
+1634740956 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\color.h
 
 1634733145 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\marca.c
 	"marca.h"
@@ -55,7 +55,7 @@
 	<stdlib.h>
 	<string.h>
 
-1634731983 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\marca.h
+1634741096 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\marca.h
 
 1634734581 source:c:\users\gabri\desktop\programacionuno\primerparciallabalegre\hardcodeo.c
 	"hardcodeo.h"
@@ -87,7 +87,7 @@
 	"marca.h"
 	"input.h"
 
-1634739910 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\trabajo.h
+1634741259 c:\users\gabri\desktop\programacionuno\primerparciallabalegre\trabajo.h
 	"fecha.h"
 	"servicio.h"
 	"auto.h"

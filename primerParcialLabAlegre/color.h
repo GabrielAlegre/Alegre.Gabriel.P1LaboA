@@ -18,9 +18,16 @@ typedef struct{
  * \param tamColor int tamanio del array de color.
  * \param idColor int id a buscar.
  * \param descripcionColor[] char cadena de caracteres donde se copiara la descripcion de la estructura de color.
- * \return int retorna 0 si no hubo error o -1 si ha ocurrido un error.
+ * \return int retorna 1 si no hubo error o 0 si ha ocurrido un error.
  *
  */
 int cargarDescripcionColor(eColor ArrayColor[], int tamColor, int idColor, char descripcionColor[]);
 
+/** \brief muestra todos los colores disponibles para que el usuario elija uno atravez de su id
+ *
+ * \param ArrayColor[] eColor lista de colores
+ * \param tamColor int tamanio del array
+ * \return int retorna 1 si no hubo error o 0 si ha ocurrido un error.
+ *
+ */
 int mostrarColor(eColor ArrayColor[], int tamColor);
