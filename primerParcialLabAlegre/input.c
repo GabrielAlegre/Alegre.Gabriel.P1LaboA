@@ -4,25 +4,56 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int validarEntero(int* enteroValidado, char mensaje[], char mensajeError[], int min, int max)
+
+int validarEntero(char pEnteroAValidar[])
 {
+	int todoOk = 1;
+
+	if(strlen(pEnteroAValidar) > 0)
+	{
+		for(int i = 0;i< strlen(pEnteroAValidar);i++)
+		{
+			if(isdigit(pEnteroAValidar[i]) == 0)
+			{
+				if(i == 0 && pEnteroAValidar[0] == '-')
+				{
+                    todoOk = 1;
+
+				}
+				else
+				{
+					todoOk = 0;
+				}
+			}
+		}
+	}
+    else
+    {
+        todoOk=0;
+    }
+
+	return todoOk;
+}
+
+int ingresoEntero(int* enteroValidado, char mensaje[], char mensajeError[], int min, int max)
+{
+	char auxEntero[150];
 	int todoOk = 0;
-	int numeroIngresado;
 
 	if(enteroValidado != NULL && mensaje != NULL && mensajeError != NULL && min < max)
 	{
-		printf("%s", mensaje);
+		printf("%s",mensaje);
 		fflush(stdin);
-		scanf("%d", &numeroIngresado);
+		gets(auxEntero);
 
-		while(numeroIngresado < min || numeroIngresado > max)
+		while(validarEntero(auxEntero) == 0 || atoi(auxEntero) > max || atoi(auxEntero) < min)
 		{
 			printf("%s", mensajeError);
 			fflush(stdin);
-			scanf("%d", &numeroIngresado);
+			gets(auxEntero);
 		}
 
-		*enteroValidado = numeroIngresado;
+		*enteroValidado = atoi(auxEntero);
 		todoOk = 1;
 	}
 	return todoOk;
@@ -88,7 +119,7 @@ int validarCaracter(char* charAValidar, char mensaje[], char mensajeError[], cha
         fflush(stdin);
         scanf("%c",&respuesta);
 
-        while(respuesta != opcionUno && respuesta != opcionDos )
+        while(respuesta != opcionUno && respuesta != opcionDos)
         {
                 printf("%s", mensajeError);
                 fflush(stdin);

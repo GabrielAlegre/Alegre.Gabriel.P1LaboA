@@ -17,13 +17,6 @@
 #define TAM_TRAB 20
 
 
-/** \brief Funcion que muestra el menu del ABM con sus respectivas opciones.
- *
- * \return char retorna la opcion elegida por el usuario.
- *
- */
-char menu();
-
 int main()
 {
     char salir='n';
@@ -35,31 +28,12 @@ int main()
     eAuto listaDeAutos[TAM_AUTO];
     eTrabajo listaDeTrabajos[TAM_TRAB];
 
-    eColor colores[TAM_COLOR]={
+    eColor colores[TAM_COLOR]={ {5000, "Negro"}, {5001, "Blanco"}, {5002, "Rojo"}, {5003, "Gris"}, {5004, "Azul"}};
 
-    {5000, "Negro",},
-    {5001, "Blanco",},
-    {5002, "Rojo"},
-    {5003, "Gris"},
-    {5004, "Azul"}
-    };
+    eMarca marcas[TAM_MARCA]={ {1000, "Renault"}, {1001, "Ford"}, {1002, "Fiat"}, {1003, "Chevrolet"}, {1004, "Peugeot"}};
 
-    eMarca marcas[TAM_MARCA]={
+    eServicio servicios[TAM_SERVICIO]={ {20000, "Lavado", 450}, {20001, "Pulido", 500}, {20002, "Encerado", 600}, {20003, "Completo", 900}};
 
-    {1000, "Renault",},
-    {1001, "Ford",},
-    {1002, "Fiat"},
-    {1003, "Chevrolet"},
-    {1004, "Peugeot"}
-    };
-
-    eServicio servicios[TAM_SERVICIO]={
-
-        {20000, "Lavado", 450},
-        {20001, "Pulido", 500},
-        {20002, "Encerado", 600},
-        {20003, "Completo", 900}
-    };
 
     if(inicializarAutos(listaDeAutos, TAM_AUTO)==-1)
     {
@@ -70,8 +44,12 @@ int main()
     {
         printf("Ocurrio un problema al inicializar los trabajos");
     }
+
     harcodearAutos(listaDeAutos, TAM_AUTO, 10, &nextIdAutos);
     hayUnAuto=1;
+
+    hardcodearTrabajos(listaDeTrabajos, TAM_TRAB, 10, &nextIdTrabajo);
+    hayUnTrabajo=1;
 
     do{
         switch(menu())
@@ -88,7 +66,7 @@ int main()
                 }
                 else
                 {
-                    printf("No hay ningun auto para modificar, opcion A para dar de alta e ingresar un auto\n");
+                    printf("\nNo hay ningun auto para modificar, opcion A para dar de alta e ingresar un auto\n\n");
                 }
                 break;
 
@@ -99,7 +77,7 @@ int main()
                 }
                 else
                 {
-                    printf("No hay ningun auto para dar de baja, opcion A para dar de alta e ingresar un auto\n");
+                    printf("\nNo hay ningun auto para dar de baja, opcion A para dar de alta e ingresar un auto\n\n");
                 }
                 buscarSiHayUnAuto(listaDeAutos, TAM_AUTO, &hayUnAuto);
                 break;
@@ -112,18 +90,21 @@ int main()
                 }
                 else
                 {
-                    printf("No hay ningun auto para listar, opcion A para dar de alta e ingresar un auto\n");
+                    printf("\nNo hay ningun auto para listar, opcion A para dar de alta e ingresar un auto\n\n");
                 }
                 break;
 
             case 'E':
+                system("cls");
                 mostrarMarcas(marcas, TAM_MARCA);
                 break;
 
             case 'F':
+                system("cls");
                 mostrarColor(colores, TAM_COLOR);
                 break;
             case 'G':
+                system("cls");
                 mostrarServicios(servicios, TAM_SERVICIO);
                 break;
             case 'H':
@@ -134,7 +115,7 @@ int main()
                 }
                 else
                 {
-                    printf("No hay ningun auto dar de alta un trabajo, opcion A para dar de alta e ingresar un auto\n");
+                    printf("\nNo hay ningun auto para dar de alta a un trabajo, opcion A para dar de alta e ingresar un auto\n\n");
                 }
                 break;
             case 'I':
@@ -142,9 +123,28 @@ int main()
                 {
                     mostrarTrabajos(listaDeTrabajos, TAM_TRAB, listaDeAutos, TAM_AUTO, servicios, TAM_SERVICIO, marcas, TAM_MARCA, colores, TAM_COLOR);
                 }
+                else
+                {
+                    printf("\nNo hay trabajos para en listar\n\n");
+                }
                 break;
-            case 'J':
+
+            case 'J'://Valido que no se pueda informar si no hay autos o trabajos dentro de la funcion menuInformes
+
+                menuInformes(listaDeTrabajos, TAM_TRAB, listaDeAutos, TAM_AUTO, servicios, TAM_SERVICIO, marcas, TAM_MARCA, colores, TAM_COLOR, hayUnAuto, hayUnTrabajo);
+
+                break;
+
+            case 'K':
                 validarCaracter(&salir, "Esta seguro que desea salir s/n?: ", "Respuesta invalida. 's' para salir. 'n' para cancelar la salida: ", 's', 'n');
+                if(salir=='n')
+                {
+                    printf("\nSe ha cancelado la salida\n");
+                }
+                else
+                {
+                    printf("\nSalida exitosa!.\n\n");
+                }
                 break;
 
             default:
@@ -155,33 +155,5 @@ int main()
 
       }while(salir=='n');
 
-
     return 0;
-}
-
-char menu()
-{
-    char opcion;
-    system("cls");
-
-    printf("                *** MENU  ***             \n");
-    printf("-----------------------------------------------------------------------\n");
-    printf("A- ALTA AUTO\n");
-    printf("B- MODIFICAR AUTO\n");
-    printf("C- BAJA AUTO\n");
-    printf("D- LISTAR AUTOS\n");
-    printf("E- LISTAR MARCAS\n");
-    printf("F- LISTAR COLORES\n");
-    printf("G- LISTAR SERVICIOS\n");
-    printf("H- ALTA TRABAJO\n");
-    printf("I- LISTAR TRABAJO\n");
-    printf("J- SALIR\n");
-
-    printf("Ingrese opcion: ");
-    fflush(stdin);
-    scanf("%c", &opcion);
-
-    opcion=toupper(opcion);
-
-    return opcion;
 }

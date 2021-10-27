@@ -11,7 +11,7 @@ int validarFecha(eFecha* fecha)
 
     while(error==-1)
     {
-        if(fecha->anio>=1950 && fecha->anio<=2021)
+        if(fecha->anio>=1990 && fecha->anio<=2021)
         {
             if(fecha->mes>=1 && fecha->mes<=12)
             {
@@ -27,6 +27,7 @@ int validarFecha(eFecha* fecha)
                         if(fecha->dia<1 || fecha->dia>31)
                         {
                             printf("Dia invalido para el mes %0d. Ingrese la fecha (DD/MM/AAAA): ", fecha->mes);
+                            fflush(stdin);
                             scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
                         }
                         else
@@ -41,6 +42,7 @@ int validarFecha(eFecha* fecha)
                         if(fecha->dia<1 || fecha->dia>30)
                         {
                             printf("Dia invalido para el mes %0d. Ingrese la fecha (DD/MM/AAAA): ", fecha->mes);
+                            fflush(stdin);
                             scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
                         }
                         else
@@ -54,7 +56,8 @@ int validarFecha(eFecha* fecha)
                             if(fecha->dia<1 || fecha->dia>29)
                             {
                                printf("Dia invalido para el mes %0d. Ingrese la fecha (DD/MM/AAAA): ", fecha->mes);
-                                scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
+                               fflush(stdin);
+                               scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
                             }
                             else
                             {
@@ -66,7 +69,8 @@ int validarFecha(eFecha* fecha)
                             if(fecha->dia<1 || fecha->dia>28)
                             {
                                printf("Dia invalido para el mes %0d. Ingrese la fecha (DD/MM/AAAA): ", fecha->mes);
-                                scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
+                               fflush(stdin);
+                               scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
                             }
                             else
                             {
@@ -79,12 +83,14 @@ int validarFecha(eFecha* fecha)
             else
             {
                 printf("Mes invalido. Ingrese la fecha (DD/MM/AAAA): ");
+                fflush(stdin);
                 scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
             }
         }
         else
         {
-            printf("Año invalido. Ingrese la fecha (DD/MM/AAAA): ");
+            printf("Anio invalido. Ingrese la fecha (DD/MM/AAAA): ");
+            fflush(stdin);
             scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
         }
     }

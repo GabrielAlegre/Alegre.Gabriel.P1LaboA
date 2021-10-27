@@ -26,7 +26,7 @@ int mostrarColor(eColor ArrayColor[], int tamColor)
     int todoOk=0;
     if(ArrayColor!=NULL && tamColor>0)
     {
-        printf("\nColor:\n");
+        printf("\nColores de autos disponibles:\n");
         printf("Id       Color\n");
         for(int i=0; i<tamColor; i++)
         {

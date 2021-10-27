@@ -94,3 +94,99 @@
 	"color.h"
 	"marca.h"
 
+1635338692 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\auto.c
+	"auto.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"color.h"
+	"marca.h"
+	"input.h"
+
+1635340842 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\auto.h
+	"color.h"
+	"marca.h"
+
+1634740956 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\color.h
+
+1634741096 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\marca.h
+
+1635270583 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\input.h
+
+1635341673 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\color.c
+	"color.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1635284923 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\fecha.c
+	"fecha.h"
+	<stdio.h>
+	<stdlib.h>
+
+1634697415 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\fecha.h
+
+1635341683 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\hardcodeo.c
+	"hardcodeo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1635341085 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\hardcodeo.h
+	"auto.h"
+	"trabajo.h"
+
+1635278841 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\input.c
+	"input.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1635341776 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"input.h"
+	"auto.h"
+	"color.h"
+	"marca.h"
+	"hardcodeo.h"
+	"servicio.h"
+	"trabajo.h"
+
+1635341205 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\servicio.h
+
+1635341652 c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\trabajo.h
+	"fecha.h"
+	"servicio.h"
+	"auto.h"
+	"color.h"
+	"marca.h"
+
+1635341832 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\marca.c
+	"marca.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1635341842 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\servicio.c
+	"servicio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1635342641 source:c:\users\gabri\desktop\programacionuno\alegre.gabriel.p1laboa\primerparciallabalegre\trabajo.c
+	"trabajo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+	"servicio.h"
+	"fecha.h"
+	"color.h"
+	"marca.h"
+	"input.h"
+

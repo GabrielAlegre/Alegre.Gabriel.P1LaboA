@@ -29,7 +29,7 @@ int mostrarMarcas(eMarca ArrayMarcas[], int tamMarca)
     int todoOk=0;
     if(ArrayMarcas!=NULL && tamMarca>0)
     {
-        printf("Marcas:\n");
+        printf("\nMarcas de autos disponibles:\n");
         printf("Id        Marcas\n");
         for(int i=0; i<tamMarca; i++)
         {

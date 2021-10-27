@@ -6,6 +6,15 @@
 #endif // INPUT_H_INCLUDED
 
 
+
+/** \brief funcion que se encarga de validar un numero.
+ *
+ * \param pEnteroAValidar[] char donde se guardara el numero para ser validado
+ * \return int Retorna 1 en caso de no haber ningun error o 0 en caso de error.
+ *
+ */
+ int validarEntero(char pEnteroAValidar[]);
+
 /** \brief funcion que permite pedir un numero entero y a su vez validarlo.
  *
  * \param enteroValidado int* Puntero a entero que se le asignara el valor del numero ya validado.
@@ -16,7 +25,7 @@
  * \return int Retorna 1 en caso de no haber ningun error o 0 en caso de error.
  *
  */
-int validarEntero(int* enteroValidado, char mensaje[], char mensajeError[], int min, int max);
+int ingresoEntero(int* enteroValidado, char mensaje[], char mensajeError[], int min, int max);
 
 /** \brief Funcion que permite pedir un numero flotante y a su vez validarlo.
  *

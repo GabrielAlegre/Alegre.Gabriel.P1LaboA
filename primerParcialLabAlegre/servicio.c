@@ -26,7 +26,7 @@ int mostrarServicios(eServicio ArrayServicios[], int tamServicio)
     int todoOk=0;
     if(ArrayServicios!=NULL && tamServicio>0)
     {
-        printf("\nServicios:\n");
+        printf("\nServicios disponibles para el auto:\n");
         printf("Id\tServicios\tPrecios\n");
         for(int i=0; i<tamServicio; i++)
         {
